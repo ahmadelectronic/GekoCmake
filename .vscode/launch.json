@@ -9,11 +9,11 @@
             "type": "cortex-debug",
             "serverpath": "/home/ajdecker/JLink_Linux_V766e_x86_64/JLinkGDBServerCLExe",
             "servertype": "jlink",
-            "device": "BGM220PC22HNA",
+            "device": "EFR32BG22C224F512IM40",
             "interface": "swd",
             "showDevDebugOutput": "parsed",
             "runToEntryPoint": "main",
-            "svdFile": "${workspaceRoot}/SVD/BGM220PC22HNA.svd"
+            "svdFile": "${workspaceRoot}/SVD/EFR32BG22C224F512IM40.svd"
         }
     ],
     "compounds": []

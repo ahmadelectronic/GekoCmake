@@ -15,8 +15,8 @@ project(dt-asr-02 C CXX ASM)
 
 # ${DEVICE} sets the target specific model name
 if (NOT DEVICE)
-    set(DEVICE BGM220PC22HNA)  # Sets device / used to locate HAL files
-    set(FLASH_ORIGIN 0x12000)        # Used to specify application start address
+    set(DEVICE EFR32BG22C224F512IM40)  # Sets device / used to locate HAL files
+    set(FLASH_ORIGIN 0x00000)        # Used to specify application start address
     set(BOARD BRD4314A)
     #set(BLE_LIB EFR32BG13P)
 endif ()
