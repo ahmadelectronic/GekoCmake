@@ -1,0 +1,35 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "flash",
+			"type": "shell",
+			"command": "commander flash ./build/src/apps/${config:cmake.configureSettings.APPLICATION}/${config:cmake.configureSettings.APPLICATION}.hex --device EFR32BG22C224F512IM40 --address 0x0"
+		}
+		,{
+			"label": "configwrite",
+			"type": "shell",
+			"command": "python ./config/configwrite.py ./config/config.json ./config/eeprom.bin && commander flash  ./config/eeprom.bin --device EFR32BG22C224F512IM40 --address 0xFE00000"
+		}
+		,{
+			"label": "recover",
+			"type": "shell",
+			"command": "commander device recover --device EFR32BG22C224F512IM40"
+		}
+		,{
+			"label": "erase",
+			"type": "shell",
+			"command": "commander device masserase --device EFR32BG22C224F512IM40"
+		},
+		{
+			"label": "cppcheck",
+			"type": "shell",
+			"command": "mkdir -p cppcheck; cppcheck --cppcheck-build-dir=cppcheck src"
+		},
+		{
+			"label": "configread",
+			"type": "shell",
+			"command": "commander readmem --range 0xFE00000:+1024 device --device EFR32BG22C224F512IM40 --outfile ./config/eeprom.bin && python ./config/configread.py ./config/config.json ./config/eeprom.bin"
+		}
+	]
+}

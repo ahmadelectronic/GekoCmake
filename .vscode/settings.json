@@ -1,12 +1,39 @@
+// Place your settings in this file to overwrite default and user settings.
 {
+    "cmake.configureSettings": {
+
+        // Specifies the path to the CMAKE toolchain file.
+        "CMAKE_TOOLCHAIN_FILE":"cmake/toolchain-arm-none-eabi.cmake",
+        "TOOLCHAIN_PREFIX": "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10",
+        // Determines the application. You can choose between:
+        // main, cli , bootloader , ble.
+        "APPLICATION":"main",
+
+        // Target board, the following boards are supported:
+        //  IOTEK-0 (Default).
+        "BOARD":"IOTEK-0",
+
+        // Determines the radio. You can choose between:
+        // BLE
+        "RADIO":"BLE",
+
+        // Determines the sensor. You can choose between:
+        // Htu21, Shtc3 .
+        "SENSOR":"Htu21",
+
+        "GENERATE_BUILD_INFO": true
+    },
+    "cmake.configureOnOpen": false,
+    "cmake.generator": "Unix Makefiles",
+    "cmake.cmakePath": "C:\\Program Files\\CMake\\bin\\cmake.exe",
     "files.associations": {
-        "sl_board_control_config.h": "c",
-        "sl_board_control.h": "c",
-        "sl_device_init_clocks.h": "c",
-        "nvm3_default.h": "c",
-        "sl_mbedtls.h": "c",
-        "threading.h": "c",
-        "config.h": "c",
-        "sl_device_init_hfxo.h": "c"
+        "sl_simple_button.h": "c",
+        "em_device.h": "c",
+        "board.h": "c",
+        "stdlib.h": "c",
+        "stdint.h": "c",
+        "em_common.h": "c",
+        "dirent.h": "c",
+        "em_se.h": "c"
     }
 }

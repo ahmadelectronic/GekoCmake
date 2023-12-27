@@ -1,0 +1,41 @@
+{
+  "commands": [
+    {
+      "text": "$(file-binary) write flash",
+      "command": "workbench.action.tasks.runTask",
+      "tooltip": "Burn binary file to mcu",
+      "arguments": ["flash"]
+    },
+    {
+        "text": "$(refresh) recover",
+        "command": "workbench.action.tasks.runTask",
+        "tooltip": "Tries to recover a device that has lost debug access ",
+        "arguments": ["recover"]
+    },
+    {
+      "text": "$(trash) erase",
+      "command": "workbench.action.tasks.runTask",
+      "tooltip": "Executes a mass erase for devices where it is supported",
+      "arguments": ["erase"]
+    },
+    {
+      "text": "$(check-all) cppcheck",
+      "command": "workbench.action.tasks.runTask",
+      "tooltip": "Analysis tool for C/C++ code",
+      "arguments": ["cppcheck"]
+    },    
+    {
+      "text": "$(server-environment) write config",
+      "command": "workbench.action.tasks.runTask",
+      "tooltip": "write config file to mcu",
+      "arguments": ["configwrite"]
+    }
+    ,
+    {
+      "text": "$(book) read config",
+      "command": "workbench.action.tasks.runTask",
+      "tooltip": "read configuration values from mcu",
+      "arguments": ["configread"]
+    }
+  ]
+}
