@@ -17,7 +17,7 @@ project(dt-asr-02 C CXX ASM)
 if (NOT DEVICE)
     set(DEVICE EFR32BG22C224F512IM40)  # Sets device / used to locate HAL files
     set(FLASH_ORIGIN 0x00000)        # Used to specify application start address
-    set(BOARD BRD4314A)
+    set(BOARD BRD4108A)
     #set(BLE_LIB EFR32BG13P)
 endif ()
 
@@ -75,8 +75,8 @@ set(CMAKE_EXE_LINKER_FLAGS "-mcpu=cortex-m33 -mthumb -mfpu=fpv5-sp-d16 -mfloat-a
 
 # Generate executable and link
 add_executable(${PROJECT_NAME}
-        ${CMAKE_SOURCE_DIR}/source/main.c
-        ${CMAKE_SOURCE_DIR}/source/app.c
+        ${CMAKE_SOURCE_DIR}/src/apps/${APPLICATION}/${APPLICATION}.c
+        ${CMAKE_SOURCE_DIR}/src/apps/${APPLICATION}/app.c
         ${CMAKE_SOURCE_DIR}/autogen/gatt_db.c
         ${CMAKE_SOURCE_DIR}/autogen/sl_bluetooth.c
         ${CMAKE_SOURCE_DIR}/autogen/sl_board_default_init.c
